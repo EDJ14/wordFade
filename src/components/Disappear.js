@@ -4,10 +4,13 @@ import classNames from 'classnames';
 
 import Words from './Words';
 
+const Container = styled.div`
+  grid-row: 2 / 3;
+  background-color: red;
+`;
+
 const FadeWords = styled.div`
   margin: auto;
-  width: 100%;
-  height: 100%;
 `;
 
 const Disappear = props => {
@@ -15,9 +18,11 @@ const Disappear = props => {
   const [start, setStart] = useState(0);
   const fadeClass = classNames({ fade: start && fade, nofade: !start });
   return (
-    <FadeWords className={fadeClass}>
-      <Words reset={setFade} fade={fade} start={setStart} />
-    </FadeWords>
+    <Container>
+      <FadeWords className={fadeClass}>
+        <Words reset={setFade} fade={fade} start={setStart} />
+      </FadeWords>
+    </Container>
   );
 };
 

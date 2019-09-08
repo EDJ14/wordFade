@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const Container = styled.input`
   height: 100%;
   width: 100%;
+  word-break: break-word;
 `;
 
 class Words extends React.Component {

@@ -7,11 +7,12 @@ import Disappear from './components/Disappear';
 class App extends React.Component {
   render() {
     return (
+      <div class='container'>
       <BrowserRouter>
         <Header />
-        <Route exact path="/" component={Header} />
-        <Route exact path="/time" component={Disappear} />
+        <Route exact path="/" component={Disappear} />
       </BrowserRouter>
+      </div>
     );
   }
 }
