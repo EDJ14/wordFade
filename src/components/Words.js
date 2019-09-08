@@ -19,7 +19,7 @@ class Words extends React.Component {
     const prom1 = new Promise((resolve, reject) => {
       setTimeout(() => resolve(this.props.fade));
     });
-    prom1.then(val => (val ? this.props.reset(1) : this.props.reset(1)));
+    prom1.then(val => this.props.reset(1));
   };
 
   render() {
