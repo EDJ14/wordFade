@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import classNames from 'classnames';
 
 import Words from './Words';
+import WordSpeed from './WordSpeed';
 
 const Container = styled.div`
   grid-row: 2 / 3;
@@ -19,6 +20,7 @@ const Disappear = props => {
   const fadeClass = classNames({ fade: start && fade, nofade: !start });
   return (
     <Container>
+      <WordSpeed />
       <FadeWords className={fadeClass}>
         <Words reset={setFade} fade={fade} start={setStart} />
       </FadeWords>
